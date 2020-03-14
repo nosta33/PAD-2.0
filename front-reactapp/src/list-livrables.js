@@ -42,7 +42,7 @@ class ListLivrables extends Component {
         return (
           <ul>
             {livrables.map(livrable => (
-              <li key={livrable.Nom}>
+              <li key={livrable.ID}>
                 {livrable.Nom}
               </li>
             ))}
