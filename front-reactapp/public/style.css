@@ -1,0 +1,30 @@
+body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+  }
+
+  #PAD{
+    
+  }
+
+  #calendar {
+
+  }
+  
+  .livrable {
+    background: #fff;
+    border: 1px solid #999;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 2px;
+    text-align: left;
+    width: 150px;
+  }
+
+  #livrables {
+    display: flex;
+    flex-direction: column;
+  }
+  

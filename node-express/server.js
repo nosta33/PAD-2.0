@@ -24,7 +24,7 @@ app.get("/", (req, res, next) => {
 });
 
 app.get("/api/livrables", (req, res, next) => {
-    var sql = "select Nom from Livrables"
+    var sql = "select Nom, ID from Livrables"
     var params = []
     db.all(sql, params, (err, rows) => {
         if (err) {

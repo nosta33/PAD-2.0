@@ -40,13 +40,13 @@ class ListLivrables extends Component {
         return <div>Chargement…</div>;
       } else {
         return (
-          <ul>
+          <div id="livrables">
             {livrables.map(livrable => (
-              <li key={livrable.ID}>
+              <div className="livrable" key={livrable.ID}>
                 {livrable.Nom}
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         );
       }
     }
