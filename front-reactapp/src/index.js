@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ListLivrables from './list-livrables';
+import PAD2 from './PAD2.js';
 
-ReactDOM.render(<ListLivrables />, document.getElementById('root'));
+ReactDOM.render(<PAD2 />, document.getElementById('root'));
