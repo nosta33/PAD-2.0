@@ -39,7 +39,7 @@ class Lignes extends Component{
           return (
             <div>
                 {livrables.map(livrable => (
-                    <div className="ligne">
+                    <div className="ligne" key={livrable.ID}>
                         <div className="livrable" key={livrable.ID}>
                             {livrable.Nom}
                         </div>
