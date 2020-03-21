@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 
-class ListLivrables extends Component {
-    constructor(props) {
+class Activites extends Component {
+  constructor(props) {
       super(props);
       this.state = {
         error: null,
         isLoaded: false,
-        livrables: []
+        activites: []
       };
     }
   
     componentDidMount() {
-      fetch("http://localhost:8000/api/livrables")
+      fetch("http://localhost:8000/api/activites/" + this.props.idLivrable)
         .then(res => res.json())
         .then(
           (result) => {
             this.setState({
               isLoaded: true,
-              livrables: result.livrables
+              activites: result.activites
             });
           },
           // Remarque : il est important de traiter les erreurs ici
@@ -33,17 +33,17 @@ class ListLivrables extends Component {
     }
   
     render() {
-      const { error, isLoaded, livrables } = this.state;
+      const { error, isLoaded, activites } = this.state;
       if (error) {
         return <div>Erreur : {error.message}</div>;
       } else if (!isLoaded) {
         return <div>Chargement…</div>;
       } else {
         return (
-          <div id="livrables">
-            {livrables.map(livrable => (
-              <div className="livrable" key={livrable.ID}>
-                {livrable.Nom}
+          <div className="activitesLivrable">
+            {activites.map(activite => (
+              <div className="activite" key={activite.id}>
+                {activite.nom}
               </div>
             ))}
           </div>
@@ -52,4 +52,4 @@ class ListLivrables extends Component {
     }
   }
 
-  export default ListLivrables;
+  export default Activites;
