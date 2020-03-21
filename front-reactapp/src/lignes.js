@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Activites from './Activites.js';
 
 class Lignes extends Component{
     constructor(props) {
@@ -37,14 +38,16 @@ class Lignes extends Component{
           return <div>Chargement…</div>;
         } else {
           return (
-            <div>
+            <div id="lignes">
                 {livrables.map(livrable => (
-                    <div className="ligne" key={livrable.ID}>
-                        <div className="livrable" key={livrable.ID}>
-                            {livrable.Nom}
+                    <div className="ligne" key={livrable.id}>
+                        <div className="livrable" key={livrable.id}>
+                            <p>{livrable.nom}</p>
                         </div>
-                        <div className="activitesLivrable">
-
+                        <div>
+                            <Activites
+                                idLivrable = {livrable.id}
+                            />
                         </div>
                     </div>
                 ))}

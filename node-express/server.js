@@ -24,7 +24,7 @@ app.get("/", (req, res, next) => {
 });
 
 app.get("/api/livrables", (req, res, next) => {
-    var sql = "select Nom, ID from Livrables"
+    var sql = "select id, nom from livrables"
     var params = []
     db.all(sql, params, (err, rows) => {
         if (err) {
@@ -34,6 +34,21 @@ app.get("/api/livrables", (req, res, next) => {
         res.json({
             "message":"success",
             "livrables":rows
+        })
+      });
+});
+
+app.get("/api/activites/:idLivrable", (req, res, next) => {
+    var sql = "select id, nom, debut, fin from activites where idLivrable = ?"
+    var params = [req.params.idLivrable]
+    db.all(sql, params, (err, rows) => {
+        if (err) {
+          res.status(400).json({"error":err.message});
+          return;
+        }
+        res.json({
+            "message":"success",
+            "activites":rows
         })
       });
 });

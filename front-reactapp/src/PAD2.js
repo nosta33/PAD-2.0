@@ -15,45 +15,20 @@ class PAD2 extends Component {
                         </div>
                     ))}
                 </div>
-
                 <div className="mois">
-                    {mois.map(moi => (
-                        <div id = {moi + 2020} className="moi" key = {moi}>
-                            {moi}
-                        </div>
-                    ))}
-                    {mois.map(moi => (
-                        <div id = {moi + 2021} className="moi" key = {moi}>
-                            {moi}
-                        </div>
-                    ))}
-                    {mois.map(moi => (
-                        <div id = {moi + 2022} className="moi" key = {moi}>
-                            {moi}
-                        </div>
-                    ))}
-                    {mois.map(moi => (
-                        <div id = {moi + 2023} className="moi" key = {moi}>
-                            {moi}
-                        </div>
-                    ))}
-                    {mois.map(moi => (
-                        <div id = {moi + 2024} className="moi" key = {moi}>
-                            {moi}
-                        </div>
-                    ))}
-                    {mois.map(moi => (
-                        <div id = {moi + 2025} className="moi" key = {moi}>
-                            {moi}
-                        </div>
+                    {annees.map(annee => (
+                        mois.map(moi => (
+                            <div id = {moi + annee} className="moi" key = {moi}>
+                                {moi}
+                            </div>
+                        ))    
                     ))}
                 </div>
             </div>
-            <div id="lignes">
+            <div>
                 <Lignes />
             </div>
         </div>);
-
     }
 }
 
