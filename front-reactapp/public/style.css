@@ -5,8 +5,9 @@ body {
   #PAD{
     display: flex;
     flex-direction: column;
-    margin: 20px;
     border: 1px solid #999;
+    border-right: 0px;
+    margin-right: 20px;
   }
 
   #top-header {
@@ -72,4 +73,27 @@ body {
   .activitesLivrable {
     display: flex;
     flex-direction: column;
+  }
+
+  .activite {
+    display: flex;
+    align-items: center;
+  }
+
+  .jalon {
+    height: 10px;
+    width: 10px;
+    background-color: #555;
+    border-radius: 50%;
+  }
+
+  .phase {
+    height: 15px;
+    width: 50px;
+    background-color: #555;
+  }
+
+  .activite > p {
+    margin-left: 5px;
+    font-size: 11px;
   }
