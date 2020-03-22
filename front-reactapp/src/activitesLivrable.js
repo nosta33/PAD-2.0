@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import Activite from './activite.js';
 
-class Activites extends Component {
+class ActivitesLivrable extends Component {
   constructor(props) {
       super(props);
       this.state = {
@@ -43,7 +44,10 @@ class Activites extends Component {
           <div className="activitesLivrable">
             {activites.map(activite => (
               <div className="activite" key={activite.id}>
-                {activite.nom}
+                <Activite 
+                  finActivite = {activite.fin}
+                />
+                <p>{activite.nom}</p>
               </div>
             ))}
           </div>
@@ -52,4 +56,4 @@ class Activites extends Component {
     }
   }
 
-  export default Activites;
+  export default ActivitesLivrable;

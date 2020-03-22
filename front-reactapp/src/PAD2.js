@@ -3,7 +3,7 @@ import Lignes from './lignes.js';
 
 class PAD2 extends Component {
     render() {
-        const annees = [2020, 2021, 2022, 2023, 2024, 2025];
+        const annees = [2019, 2020, 2021, 2022, 2023, 2024, 2025];
         const mois = ["S1", "S2", "S3","S4"];
         return (
         <div id="PAD">
@@ -25,9 +25,7 @@ class PAD2 extends Component {
                     ))}
                 </div>
             </div>
-            <div>
-                <Lignes />
-            </div>
+            <Lignes />
         </div>);
     }
 }
