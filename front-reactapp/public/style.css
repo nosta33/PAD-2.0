@@ -28,8 +28,6 @@ body {
 
   #annees {
     border-bottom: 1px solid #999;
-    display: flex;
-    justify-content: space-around;
   }
 
   .annee {
@@ -73,11 +71,13 @@ body {
   .activitesLivrable {
     display: flex;
     flex-direction: column;
+    width: 88%;
   }
 
   .activite {
     display: flex;
     align-items: center;
+    position: relative;
   }
 
   .jalon {
@@ -96,4 +96,9 @@ body {
   .activite > p {
     margin-left: 5px;
     font-size: 11px;
+  }
+
+  .ressort {
+    width:60%;
+    height: 10px;
   }
